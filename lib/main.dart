@@ -27,6 +27,7 @@ class TextFieldExamble extends StatefulWidget {
 }
 
 class _TextFieldExamble extends State<TextFieldExamble> {
+  // Number text field
   Widget _buildNumberTextField() {
     return TextField(
       keyboardType: TextInputType.number,
@@ -51,6 +52,7 @@ class _TextFieldExamble extends State<TextFieldExamble> {
     );
   }
 
+// Mulitiline text field
   final _controller = TextEditingController();
   Widget _buildMutilineTextField() {
     return TextField(
@@ -66,6 +68,7 @@ class _TextFieldExamble extends State<TextFieldExamble> {
     );
   }
 
+// Password text field
   bool _showPassword = false;
   Widget _buildPassWordTextField() {
     return TextField(
@@ -81,6 +84,14 @@ class _TextFieldExamble extends State<TextFieldExamble> {
           }),
         ),
       ),
+    );
+  }
+
+// Border less Text fild
+  Widget _buildBorderLessTextField() {
+    return const TextField(
+      maxLines: 3,
+      decoration: InputDecoration.collapsed(hintText: "Borderless Input"),
     );
   }
 
@@ -104,7 +115,8 @@ class _TextFieldExamble extends State<TextFieldExamble> {
           _buildPassWordTextField(),
           const ListTile(
             title: Text("4. Borderless input field"),
-          )
+          ),
+          _buildBorderLessTextField()
         ],
       ),
     );
