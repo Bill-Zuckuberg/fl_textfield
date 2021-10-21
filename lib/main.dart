@@ -58,7 +58,7 @@ class _TextFieldExamble extends State<TextFieldExamble> {
     return TextField(
       controller: _controller,
       maxLines: 10,
-      textCapitalization: TextCapitalization.sentences,
+      textCapitalization: TextCapitalization.words,
       decoration: InputDecoration(
           counterText: "${_controller.text.split(" ").length} words ",
           labelText: "Enter mulitiline text",
